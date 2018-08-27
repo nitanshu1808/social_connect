@@ -1,0 +1,21 @@
+<%= form_for resource, url: user_registration_path, method: :post do |f| %>
+    <div class="or-line"><span><%= I18n.t("app.or") %></span></div>
+
+    <%= link_to user_instagram_omniauth_authorize_path do %>
+      <%= image_tag("instagram_button.png", class: "insta-logo") %>
+    <% end %>
+
+    <%= f.text_field :user_name, :label => false, placeholder: I18n.t("app.choose_username") + " *", autocomplete: "off", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:user_name][0] %>
+
+    <%= f.email_field :email, :label => false, placeholder: I18n.t("app.enter_email") + " *", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:email][0] %>
+
+    <%= f.text_field :full_name, :label => false, placeholder: I18n.t("app.enter_fullname") + " *", autocomplete: "off", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:full_name][0] %>
+
+    <%= f.password_field :password, :label => false, autocomplete: "off", placeholder: I18n.t("app.enter_password") + " *", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:password][0]  %>
+
+    <div class="pull-left req-text">
+      *<%= I18n.t("app.required")%>
+    </div>
+    <p class="agree-to-use"> <%= I18n.t("app.agreement") %> <%= link_to I18n.t("app.privacy"), "javascript:void(0)" %> and <%= link_to I18n.t("app.tos"), "javascript:void(0)" %>.</p>
+    <%= f.submit I18n.t("app.get_started"), class: "submit-btn" %>
+<% end %>
