@@ -1,0 +1,39 @@
+.app-icon{
+	width:35px;
+}
+
+.app-name{
+	color: darkred !important;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.align-nav{
+	align-self: right !important;
+}
+.login-btn{
+	color: darkred !important;
+	border-color: darkred !important;
+}
+.flash-msg{
+	margin-top: 50px !important;
+}
+
+.welcm-msg{
+	color: darkred !important;
+	font-weight: bold;
+	font-size: 70px;	
+	border-bottom: 0.2px solid darkred;
+}
+
+.align-data{
+	margin: 18px 20px 20px 20px;
+}
+
+.align-logo-img{
+	margin: 60px 0px 20px 0px;
+}
+
+.login-form-heading{
+	color: darkred;
+}

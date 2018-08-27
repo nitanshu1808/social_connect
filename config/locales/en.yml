@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app:
+    name: "SocialConnect"
+    login: "Log In"
+    welcome_msg: "Wecome to Social Connect"
+    create_account: "Create Your Account"
+    or: "OR"
+    sign_up: "Sign Up"
