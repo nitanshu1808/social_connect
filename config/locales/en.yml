@@ -50,3 +50,13 @@ en:
     agreement:            "By signing up, I agree to"
     privacy:              "Privacy Policy"
     tos:                  "Terms of Use"
+    already_exist:        "User already exist."
+    logout:               "Log Out"
+  model:
+    user:
+      valid_password:       "Password should be of atleast 12 characters long"
+      enter_val:            "Please enter a %{val}."
+      user_name:            "User Name"
+      password:             "Password"
+      full_name:            "Full Name"
+      character_validation: "%{val} must be less than %{num} characters"

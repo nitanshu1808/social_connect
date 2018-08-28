@@ -7,8 +7,6 @@
 
     <%= f.text_field :user_name, :label => false, placeholder: I18n.t("app.choose_username") + " *", autocomplete: "off", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:user_name][0] %>
 
-    <%= f.email_field :email, :label => false, placeholder: I18n.t("app.enter_email") + " *", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:email][0] %>
-
     <%= f.text_field :full_name, :label => false, placeholder: I18n.t("app.enter_fullname") + " *", autocomplete: "off", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:full_name][0] %>
 
     <%= f.password_field :password, :label => false, autocomplete: "off", placeholder: I18n.t("app.enter_password") + " *", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:password][0]  %>
