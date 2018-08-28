@@ -1,7 +1,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-  def facebook
-    @user = User.create_or_update_insta_user(auth)
+  def instagram
+    @user = User.create_or_update_insta_user(request.env["omniauth.auth"])
     if @user.errors.any?
       render 'home/index'
     else

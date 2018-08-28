@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: 'home#feeds' #declaring the root path for authentic users
   end
+
+  # get '*path' => redirect('/') #redirecting invalid url to root
 end

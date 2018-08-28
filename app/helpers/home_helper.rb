@@ -26,9 +26,9 @@ module HomeHelper
     if current_user
       link_to root_path, class: "navbar-brand" do
         if current_user.image_url
-          image_tag(current_user.image_url, alt: "logo", class: 'app-icon')
+          image_tag(current_user.image_url, alt: "logo", class: 'app-icon rounded-circle')
         else
-          image_tag("default_user.png", alt: "logo", class: 'app-icon')
+          image_tag("default_user.png", alt: "logo", class: 'app-icon rounded-circle')
         end
       end
     end
