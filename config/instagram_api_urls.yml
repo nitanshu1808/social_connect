@@ -1,0 +1,13 @@
+default: &default
+  instagram_url:    'https://api.instagram.com/v1/'
+  user_self:        'users/self/'
+  recent_media:     'users/self/media/recent/'
+
+development:
+  <<: *default
+
+qa:
+  <<: *default
+
+production:
+  <<: *default
