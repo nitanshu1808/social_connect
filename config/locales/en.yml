@@ -50,8 +50,10 @@ en:
     agreement:            "By signing up, I agree to"
     privacy:              "Privacy Policy"
     tos:                  "Terms of Use"
-    already_exist:        "User already exist."
+    already_exist:        "User with this username already exist, Please try with different username"
     logout:               "Log Out"
+    welcome_user_msg:     "welcome %{val}"
+    instruction:          "Register with Instagram in order to fetch user picture feeds"
   model:
     user:
       valid_password:       "Password should be of atleast 12 characters long"

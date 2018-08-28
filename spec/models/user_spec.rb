@@ -21,7 +21,6 @@ RSpec.describe User, type: :model do
 
     User.create_or_update_insta_user(auth)
     new_user = User.first
-    debugger
     expect(new_user.user_name).to eq("mouse123")
     expect(new_user.full_name).to eq("mickeymouse")
     expect(new_user.image_url).to eq("https://scontent.cdninstagram.com/vp/c5386c0412db18t51.2885-19/s150x150/32897793_1800396913356398_6416828715300290560_n.jpg")

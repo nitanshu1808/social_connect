@@ -22,7 +22,7 @@
 .welcm-msg{
   color: darkred !important;
   font-weight: bold;
-  font-size: 70px;  
+  font-size: 70px;
   border-bottom: 0.2px solid darkred;
 }
 
@@ -101,4 +101,20 @@
   color: red;
   float: left;
   margin: -15px 0px 10px 0px;
+}
+
+
+.instruction_msg{
+  color: darkred !important;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+
+.welcome_user_msg{
+  margin: 70px 0px;
+  color: darkred !important;
+  font-weight: bold;
+  font-size: 70px;
+  border-bottom: 0.2px solid darkred;
 }

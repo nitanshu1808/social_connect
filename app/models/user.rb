@@ -14,6 +14,7 @@ class User < ApplicationRecord
 
   #validations
   validates :user_name,  :full_name, :password, presence: true
+  validates :user_name, uniqueness: {message: I18n.t("app.already_exist")}
   validates :password, length: { minimum: 3,
     message: I18n.t("model.user.valid_password")}
   #################################################################################################
