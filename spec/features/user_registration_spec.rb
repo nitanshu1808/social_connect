@@ -2,6 +2,8 @@ require 'rails_helper'
 
 require './spec/helpers/registration_helper.rb'
 
+require 'support/factory_bot'
+
 RSpec.configure do |config|
   config.include RegistrationHelper
 end
