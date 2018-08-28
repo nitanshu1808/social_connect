@@ -40,7 +40,7 @@ en:
     register_instagram:   "Register With Instagram"
     sign_up:              "Sign Up"
     choose_username:      "Choose Username"
-    enter_email:          "Enter Email"
+    enter_username:       "Enter User Name"
     enter_fullname:       "Enter Full Name"
     enter_password:       "Enter Password"
     create_your_account:  "Create Your Account"
@@ -54,6 +54,9 @@ en:
     logout:               "Log Out"
     welcome_user_msg:     "welcome %{val}"
     instruction:          "Register with Instagram in order to fetch user picture feeds"
+    log_in_account:       "LogIn to your account"
+    dont_have_account:    "Don't have an account?"
+    invalid_credentials:  "Invalid Username/Password. Username and Password does not match"
   model:
     user:
       valid_password:       "Password should be of atleast 12 characters long"

@@ -1,9 +1,7 @@
 <%= form_for resource, url: user_registration_path, method: :post do |f| %>
     <div class="or-line"><span><%= I18n.t("app.or") %></span></div>
 
-    <%= link_to user_instagram_omniauth_authorize_path do %>
-      <%= image_tag("instagram_button.png", class: "insta-logo") %>
-    <% end %>
+    <%= instagram_button %>
 
     <%= f.text_field :user_name, :label => false, placeholder: I18n.t("app.choose_username") + " *", autocomplete: "off", class: "form-control align-field", "data-validate-error": true, "data-error-msg": f.object.errors[:user_name][0] %>
 

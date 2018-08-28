@@ -1,7 +1,7 @@
 module HomeHelper
 
   def login_logout_path
-    current_user && logout_path || login_path
+    current_user && logout_path || user_path
   end
 
   def logout_path
@@ -10,10 +10,8 @@ module HomeHelper
     end
   end
 
-  def login_path
-    link_to root_path, class: "btn my-2 my-sm-0 login-btn" do
-      I18n.t("app.login")
-    end
+  def user_path
+    (params["controller"] == "home" && params["action"] == "index") ? login_path : registration_path
   end
 
   def welcome_user_msg
@@ -34,5 +32,23 @@ module HomeHelper
         end
       end
     end
+  end
+
+  def instagram_button
+    link_to user_instagram_omniauth_authorize_path do
+      image_tag("instagram_button.png", class: "insta-logo")
+    end
+  end
+
+  def login_path
+    link_to new_user_session_path, class: "btn my-2 my-sm-0 login-btn" do
+      I18n.t("app.login")
+    end
+  end
+
+  def registration_path
+    link_to root_path, class: "btn my-2 my-sm-0 login-btn" do
+      I18n.t("app.sign_up")
+    end    
   end
 end

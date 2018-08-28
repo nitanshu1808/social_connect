@@ -84,6 +84,11 @@ GEM
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_bot (4.11.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.0)
+      factory_bot (~> 4.11.0)
+      railties (>= 3.0.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -260,6 +265,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  factory_bot_rails
   figaro
   i18n-js
   jbuilder (~> 2.5)
