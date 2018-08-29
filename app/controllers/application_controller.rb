@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
 
+	def sign_in_and_redirect
+		sign_in(resource_name, resource)
+    redirect_to root_url
+	end
+
 	protected
 
   def after_sign_in_path_for(resource)

@@ -14,6 +14,7 @@ RSpec.feature "user registration" do
     visit root_path
     expect(page).to have_css('img.insta-logo')
     find('img.insta-logo').click
+    # expect(page).to have_text(I18n.t("devise.omniauth_callbacks.success", kind: 'instagram'))
     # expect(page).to have_link("Log Out")
     # expect(page).to have_link("mouse123")
   end

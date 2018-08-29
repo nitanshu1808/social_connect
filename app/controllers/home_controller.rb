@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   def index
   end
 
+  #displaying user information and picture feeds
   def feeds
     @provider   = current_user.provider
     @user_info  = InstaApi.new(api_params).profile_information

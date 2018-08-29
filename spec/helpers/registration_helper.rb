@@ -21,4 +21,5 @@ module RegistrationHelper
       }
     })
   end
+
 end

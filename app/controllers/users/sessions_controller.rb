@@ -4,8 +4,7 @@ class Users::SessionsController < Devise::SessionsController
     @user = User.find_by(user_name: params[:user][:user_name])
     if @user && @user.valid_password?(params[:user][:password])
       set_flash_message!(:notice, :signed_in)
-      sign_in(resource_name, resource)
-      redirect_to root_url
+      sign_in_and_redirect
     else
       @user = @user || User.new(signin_params)
       @user.errors.add(:password, I18n.t('app.invalid_credentials'))
