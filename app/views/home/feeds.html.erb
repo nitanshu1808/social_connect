@@ -36,4 +36,17 @@
   </div>
 </div>
 
-<%= render 'picture_feeds' %>
+<div class="container text-center user-pictures">
+  <div class="feed-heading">
+    <%= I18n.t("app.picture_feeds") %>
+  </div>
+
+  <%= render 'picture_feeds' %>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="full_view_image">
+  <div id="caption"></div>
+</div>

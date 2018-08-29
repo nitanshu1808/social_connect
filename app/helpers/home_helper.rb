@@ -79,4 +79,16 @@ module HomeHelper
   def user_liked(media)
     media["user_has_liked"]
   end
+
+  def user_info(media)
+    media["user"]["username"]
+  end
+
+  def check_more_feeds
+    if @user_media["pagination"].present?
+      link_to load_more_path(max_id: @user_media["data"].last["id"]), class: "load_more-btn btn", remote: true do
+        I18n.t("app.load_more")
+      end
+    end
+  end
 end

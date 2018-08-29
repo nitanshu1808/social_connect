@@ -378,3 +378,14 @@
         width: 100%;
     }
 }
+
+.modal{
+  overflow: auto !important;
+}
+
+
+.load_more-btn{
+  width: 100%;
+  background-color: #660000 !important;
+  color: white !important;
+}

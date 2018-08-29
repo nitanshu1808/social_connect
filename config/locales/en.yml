@@ -63,6 +63,7 @@ en:
     picture_feeds:        "Pictures Feed"
     comment:              "Comment"
     like:                 "Like"
+    load_more:            "Load More"
   model:
     user:
       valid_password:       "Password should be of atleast 12 characters long"

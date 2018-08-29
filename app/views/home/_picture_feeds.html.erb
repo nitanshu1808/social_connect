@@ -1,48 +1,37 @@
-<div class="container text-center">
-  <div class="feed-heading">
-    <%= I18n.t("app.picture_feeds") %>
-  </div>
+<% @user_media["data"] && @user_media["data"].in_groups_of(3).each do |group| %>
+  <div class="row row-spacing">
+    <% group.compact.each do |media| %>
+      <div class="col-md-4">
+        <div class="img-box">
+          <div>
+              <span class="image-user">
+                <%= user_info(media) %>
+              </span>
+              <span class="img-location"><%= image_location(media) %></span>
+          </div>
+          <div>
+            <%= image_tag( image_url(media), alt: image_caption(media), class: 'display-pic') %>
+          </div>
+          <div class="caption-txt">
+            <span>
+              <%= image_caption(media)%>
+            </span>
+          </div>
+          <div>
+            <span class="like-count-msg">
+              <%= pluralize_word(I18n.t('app.comment'), comment_count(media)) %> :
+              <span class="like-comment-count"> <%= comment_count(media) %> </span>
+            </span>
 
-  <% @user_media && @user_media.in_groups_of(3).each do |group| %>
-    <div class="row row-spacing">
-      <% group.compact.each do |media| %>
-        <div class="col-md-4">
-          <div class="img-box">
-            <div>
-                <span class="image-user">
-                  <%= @user_info["username"] %>
-                </span>
-                <span class="img-location"><%= image_location(media) %></span>
-            </div>
-            <div>
-              <%= image_tag( image_url(media), alt: image_caption(media), class: 'display-pic') %>
-            </div>
-            <div class="caption-txt">
-              <span>
-                <%= image_caption(media)%>                
-              </span>
-            </div>
-            <div>
-              <span class="like-count-msg">
-                <%= pluralize_word(I18n.t('app.comment'), comment_count(media)) %> :
-                <span class="like-comment-count"> <%= comment_count(media) %> </span>
-              </span>
-
-              <span class="like-count-msg">
-                <%= pluralize_word(I18n.t('app.like'), like_count(media)) %> :
-                <span class="like-comment-count"><%= like_count(media) %></span>
-              </span>
-            </div>
+            <span class="like-count-msg">
+              <%= pluralize_word(I18n.t('app.like'), like_count(media)) %> :
+              <span class="like-comment-count"><%= like_count(media) %></span>
+            </span>
           </div>
         </div>
-      <% end %>
-    </div>
-  <% end %>
-</div>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="full_view_image">
-  <div id="caption"></div>
-</div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<div id="more-feeds"></div>
+<div class="next-button"><%= check_more_feeds %></div>

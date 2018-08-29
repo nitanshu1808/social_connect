@@ -42,7 +42,7 @@ $(document).on('click', '.display-pic', function(event){
   var modalImg          = document.getElementById("full_view_image");
   var captionText       = document.getElementById("caption");
   modal.style.display = "block";
-  // $(window).scrollTop(0);
+  $("<div></div>").css({height:"350px", overflow:"auto"});
   modalImg.src          = this.src;
   captionText.innerHTML = this.alt;
 });

@@ -12,6 +12,11 @@ class HomeController < ApplicationController
     @user_media = InstaApi.new(api_params).recent_media
   end
 
+  def load_more
+    @provider   = current_user.provider
+    @user_media = InstaApi.new(api_params.merge({max_id: params["max_id"]})).recent_media
+  end
+
   private
 
   def check_user_provider
