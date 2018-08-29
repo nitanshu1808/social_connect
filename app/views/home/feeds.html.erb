@@ -1,0 +1,23 @@
+<div class="container text-center">
+  <div class="row align-info">
+    <div class="col-md-3">
+      <%= image_tag @user_info["profile_picture"], class: "rounded-circle" %>
+    </div>
+    <div class="col-md-6 info-box">
+      <div class="info-username">
+        <%= @user_info["username"] %>
+      </div>
+      <div class = "extra-info">
+        <span><%= pluralize(@user_info["counts"]["media"], I18n.t('app.post')) %> </span>
+        <span><%= pluralize(@user_info["counts"]["follows"], I18n.t('app.following')) %> </span>
+        <span><%= pluralize(@user_info["counts"]["followed_by"], I18n.t('app.follower')) %> </span>
+      </div>
+      <div>
+        <h2><%= @user_info["full_name"] %></h2>
+      </div>
+    </div>
+    <div class="col-md-3">
+      
+    </div>
+  </div>
+</div>

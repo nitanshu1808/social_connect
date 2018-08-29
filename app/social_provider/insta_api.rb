@@ -18,7 +18,7 @@ class InstaApi
     puts(url) if Rails.env.development?
     begin
       response = RestClient.get url, {:params => @options}
-      JSON.parse(response)
+      JSON.parse(response)["data"]
     rescue RestClient::Unauthorized => error
       @retries ||= 0
       if @retries == 0
