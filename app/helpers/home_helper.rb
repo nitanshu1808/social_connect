@@ -73,7 +73,7 @@ module HomeHelper
   end
 
   def image_location(media)
-    media["location"] && media["location"]["name"]
+    media["location"] && media["location"]["name"].truncate(23, omission: '.')
   end
 
   def user_liked(media)
