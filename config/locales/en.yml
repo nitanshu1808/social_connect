@@ -60,7 +60,7 @@ en:
     post:                 "Post"
     follower:             "Follower"
     following:            "Following"
-    picture_feeds:        "Feed of Pictures"
+    picture_feeds:        "Pictures Feed"
     comment:              "Comment"
     like:                 "Like"
   model:

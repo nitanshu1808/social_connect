@@ -35,3 +35,20 @@ $(function() {
     $('.flash-msg').slideUp(800);
   }, 1500);
 });
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+$(document).on('click', '.display-pic', function(event){
+  var modal             = document.getElementById('myModal');
+  var modalImg          = document.getElementById("full_view_image");
+  var captionText       = document.getElementById("caption");
+  modal.style.display = "block";
+  // $(window).scrollTop(0);
+  modalImg.src          = this.src;
+  captionText.innerHTML = this.alt;
+});
+
+
+$(document).on('click', '.close', function(event){
+  var modal             = document.getElementById('myModal');
+  modal.style.display   = "none";
+})
