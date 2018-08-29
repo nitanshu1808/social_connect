@@ -51,4 +51,32 @@ module HomeHelper
       I18n.t("app.sign_up")
     end    
   end
+
+  def pluralize_word(string, count)
+    string.pluralize(count)
+  end
+
+  def image_url(media)
+    media["images"]["standard_resolution"]["url"]
+  end
+
+  def image_caption(media)
+    media["caption"] && media["caption"]["text"] 
+  end
+
+  def like_count(media)
+    media["likes"]["count"]
+  end
+
+  def comment_count(media)
+    media["comments"]["count"]
+  end
+
+  def image_location(media)
+    media["location"] && media["location"]["name"]
+  end
+
+  def user_liked(media)
+    media["user_has_liked"]
+  end
 end

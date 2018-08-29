@@ -153,17 +153,137 @@
 }
 
 .align-info{
-  margin: 70px 10px;
+  margin: 30px 10px;
+  border-bottom: 0.2px solid darkred;
 }
 
 .info-box{
   border: 0.1px solid darkgrey; 
 }
 
-
 .info-username{
   color: #660000 !important;
 /*  font-weight: bold;*/
-  font-size: 40px;
+  font-size: 20px;
   font-family: sans-serif;
+}
+
+.search-bar {
+    position: relative;
+/*    height: auto;*/
+/*    padding: 4px 10px 10px;*/
+    right: 0;
+    left: auto;
+/*    width: 100%;*/
+    float: left;
+    z-index: 1002;
+}
+
+.align-profile-pic{
+  height: 140px;
+  width:  140px;
+  border: 2px solid #660000;
+  border-radius: 4px;
+  margin: 30px 0px;
+}
+
+
+
+.profile-label .status {
+  margin-top: 25px;
+  padding-top: 20px;
+  display: flex; display: -ms-flexbox;
+  justify-content: center; -ms-flex-pack: center;
+  border-top: 1px solid rgba(265,265,265,0.25);
+  width: 100%;
+}
+.profile-label .status .set {
+  display: block;
+  padding: 0 10px;
+  position: relative;
+  width: 50%;
+}
+
+.name-t {
+    border-top: 1px solid rgba(0,0,0,0.17);
+    display: block;
+    padding: 6px 0 0;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.align-count-info{
+  display: table-cell;
+  border-right:  1px solid #660000;
+}
+
+
+.extra-info{
+  margin: 10px 0px;
+  border-bottom: 1px solid #660000; 
+  display: table;
+}
+
+.count-txt{
+  font-size: 15px;
+  font-weight: initial;
+  border-top: 1px solid #660000;
+  margin: 20px 0px
+}
+
+.align-followed-info{
+  display: table-cell;
+}
+
+.count-info{
+  font-weight: bold;
+  font-size: 20px;
+}
+.feed-heading{
+  margin: 20px 0px;
+  font-weight: bold;
+  font-size: 40px; 
+  color: #660000;
+  border-bottom: 1px solid #660000;
+}
+
+.display-pic{
+  height: 320px;
+  width:  100%;
+  margin: 5px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.img-box{
+  margin: 20px 0px;
+  border: 1px solid black;
+}
+
+.image-user{
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px 10px;
+  color: #660000;
+}
+
+
+.img-location{
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px 10px; 
+  color: #660000;
+}
+
+
+.like-comment-count{
+  font-size: 15px;
+  font-weight: bold;
+  color: #660000; 
+}
+
+.like-count-msg{
+  margin: 0px 20px;
 }

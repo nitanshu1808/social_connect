@@ -57,9 +57,12 @@ en:
     log_in_account:       "LogIn to your account"
     dont_have_account:    "Don't have an account?"
     invalid_credentials:  "Invalid Username/Password. Username and Password does not match"
-    post:                 "post"
-    follower:             "follower"
-    following:            "following"
+    post:                 "Post"
+    follower:             "Follower"
+    following:            "Following"
+    picture_feeds:        "Feed of Pictures"
+    comment:              "Comment"
+    like:                 "Like"
   model:
     user:
       valid_password:       "Password should be of atleast 12 characters long"

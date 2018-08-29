@@ -1,0 +1,35 @@
+<div class="container text-center">
+  <div class="feed-heading">
+    <%= I18n.t("app.picture_feeds") %>
+  </div>
+
+  <% @user_media && @user_media.in_groups_of(3).each do |group| %>
+    <div class="row row-spacing">
+      <% group.compact.each do |media| %>
+        <div class="col-md-4">
+          <div class="img-box">
+            <div class="location-info">
+                <span class="image-user"><%= @user_info["username"] %></span>
+                <span class="img-location"><%= image_location(media) %></span>
+            </div>
+            <div>
+              <%= image_tag( image_url(media), alt: image_caption(media), class: 'display-pic') %>
+            </div>
+            <div>
+              <span class="like-count-msg">
+                <%= pluralize_word(I18n.t('app.comment'), comment_count(media)) %> :
+                <span class="like-comment-count"> <%= comment_count(media) %> </span>
+              </span>
+
+              <span class="like-count-msg">
+                <%= pluralize_word(I18n.t('app.like'), like_count(media)) %> :
+                <span class="like-comment-count"><%= like_count(media) %></span>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
