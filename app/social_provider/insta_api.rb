@@ -20,9 +20,9 @@ class InstaApi
       response = RestClient.get url, {:params => @options.merge(additional_options)}
       JSON.parse(response)
     rescue RestClient::Unauthorized => error
-      @retries ||= 0
-      if @retries == 0
-        @retries = 1
+      retries ||= 0
+      if retries == 0
+        retries = 1
         retry
       else
         raise error

@@ -1,4 +1,5 @@
 module HomeHelper
+  # This helper module provides helper methods for the home view templates
 
   def login_logout_path
     current_user && logout_path || user_path
@@ -25,8 +26,8 @@ module HomeHelper
   def display_user_img
     if current_user
       link_to root_path, class: "navbar-brand" do
-        if current_user.image_url
-          image_tag(current_user.image_url, alt: "logo", class: 'app-icon rounded-circle')
+        if profile_picture_url
+          image_tag(profile_picture_url, alt: "logo", class: 'app-icon rounded-circle')
         else
           image_tag("default_user.png", alt: "logo", class: 'app-icon rounded-circle')
         end
@@ -52,39 +53,15 @@ module HomeHelper
     end
   end
 
-  def pluralize_word(string, count)
-    string.pluralize(count)
-  end
-
-  def image_url(media)
-    media["images"]["standard_resolution"]["url"]
-  end
-
-  def image_caption(media)
-    media["caption"] && media["caption"]["text"]
-  end
-
-  def like_count(media)
-    media["likes"]["count"]
-  end
-
-  def comment_count(media)
-    media["comments"]["count"]
-  end
-
-  def image_location(media)
-    media["location"] && media["location"]["name"].truncate(23, omission: '.')
-  end
-
-  def user_info(media)
-    media["user"]["username"]
-  end
-
   def check_more_feeds
     if @user_media["pagination"].present?
       link_to load_more_path(max_id: @user_media["data"].last["id"]), class: "load_more-btn btn", remote: true do
         I18n.t("app.load_more")
       end
     end
+  end
+
+  def profile_picture_url
+    current_user.image_url
   end
 end
