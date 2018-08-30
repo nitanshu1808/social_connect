@@ -64,6 +64,7 @@ en:
     comment:              "Comment"
     like:                 "Like"
     load_more:            "Load More"
+    login_to_your_account: "Login to Your Account"
   model:
     user:
       valid_password:       "Password should be of atleast 12 characters long"
