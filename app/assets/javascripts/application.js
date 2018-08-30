@@ -18,5 +18,4 @@
 //= require jquery.min
 //= require bootstrap.min
 //= require jquery.validate
-//= require popper.min
 //= require custom

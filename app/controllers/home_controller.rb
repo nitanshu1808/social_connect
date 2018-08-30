@@ -20,7 +20,7 @@ class HomeController < ApplicationController
   private
 
   def check_user_provider
-    (render "normal_user_welcome") if current_user.provider.nil?
+    (render "normal_user_welcome" and return) if current_user.provider.nil?
   end
 
   def api_params

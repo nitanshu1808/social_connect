@@ -1,5 +1,6 @@
 .app-icon{
   width:35px;
+  margin: -6px 0px;
 }
 
 .app-name{
@@ -389,4 +390,9 @@
   background-color: #660000 !important;
   color: white !important;
   margin: 20px 0px;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+  color: darkred !important;
 }
