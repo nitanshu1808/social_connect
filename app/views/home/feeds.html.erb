@@ -6,37 +6,33 @@
     </div>
     <br>
   </div>
-
-  <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4 extra-info">
-      <div class="align-count-info">
-        <div class="count-info"><%= @user_info["counts"]["media"] %></div>
-        <span class="count-txt">
-          <%= pluralize_word(I18n.t('app.post'), @user_info["counts"]["media"]) %>
-        </span>
-      </div>
-
-      <div class="align-count-info">
-        <div class="count-info"><%= @user_info["counts"]["follows"] %></div>
-        <span class="count-txt">
-          <%= pluralize_word(I18n.t('app.following'), @user_info["counts"]["follows"]) %>
-        </span>
-
-      </div>
-
-      <div class="align-followed-info">
-        <div class="count-info"><%= @user_info["counts"]["followed_by"] %></div>
-        <span class="count-txt">
-          <%= pluralize_word(I18n.t('app.follower'), @user_info["counts"]["followed_by"]) %>
-        </span>
-      </div>
-    </div>
-    <div class="col-md-4"></div>
-  </div>
 </div>
 
+
 <div class="container text-center">
+  <div class=" row extra-info">
+    <div class="align-count-info">
+      <div class="count-info"><%= @user_info["counts"]["media"] %></div>
+      <span class="count-txt">
+        <%= pluralize_word(I18n.t('app.post'), @user_info["counts"]["media"]) %>
+      </span>
+    </div>
+
+    <div class="align-count-info">
+      <div class="count-info"><%= @user_info["counts"]["follows"] %></div>
+      <span class="count-txt">
+        <%= pluralize_word(I18n.t('app.following'), @user_info["counts"]["follows"]) %>
+      </span>
+
+    </div>
+
+    <div class="align-followed-info">
+      <div class="count-info"><%= @user_info["counts"]["followed_by"] %></div>
+      <span class="count-txt">
+        <%= pluralize_word(I18n.t('app.follower'), @user_info["counts"]["followed_by"]) %>
+      </span>
+    </div>
+  </div>
   <div class="feed-heading">
     <%= I18n.t("app.picture_feeds") %>
   </div>
