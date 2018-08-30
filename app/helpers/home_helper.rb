@@ -49,7 +49,7 @@ module HomeHelper
   def registration_path
     link_to root_path, class: "btn my-2 my-sm-0 login-btn" do
       I18n.t("app.sign_up")
-    end    
+    end
   end
 
   def pluralize_word(string, count)
@@ -61,7 +61,7 @@ module HomeHelper
   end
 
   def image_caption(media)
-    media["caption"] && media["caption"]["text"] 
+    media["caption"] && media["caption"]["text"]
   end
 
   def like_count(media)
@@ -74,10 +74,6 @@ module HomeHelper
 
   def image_location(media)
     media["location"] && media["location"]["name"].truncate(23, omission: '.')
-  end
-
-  def user_liked(media)
-    media["user_has_liked"]
   end
 
   def user_info(media)

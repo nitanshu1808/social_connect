@@ -15,8 +15,4 @@ module ApplicationHelper
   def resource
     @user ||= User.new
   end
-
-  def devise_mapping
-    @devise_mapping ||= Devise.mappings[:user]
-  end
 end

@@ -24,7 +24,7 @@ class User < ApplicationRecord
     user   = User.find_by(user_name: auth[:info][:nickname]) || User.new
 
     #checking whether user is created via normal process or by social provider
-    if (user.persisted? && user.try(:provider).nil?) 
+    if (user.persisted? && user.try(:provider).nil?)
       user.errors.add(:user_name, I18n.t('app.already_exist'))
     else
       user.build_provider if user.new_record?
