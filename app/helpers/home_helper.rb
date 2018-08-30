@@ -51,7 +51,7 @@ module HomeHelper
 
   def check_more_feeds
     if @user_media["pagination"].present?
-      link_to load_more_path(max_id: @user_media["data"].last["id"]), class: "load_more-btn btn", remote: true do
+      link_to load_more_path(max_id: @user_media["data"].last["id"]), class: "btn load_more-btn", remote: true do
         I18n.t("app.load_more")
       end
     end
